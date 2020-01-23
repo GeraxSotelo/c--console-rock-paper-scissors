@@ -19,46 +19,66 @@ namespace rock_paper_scissors
         {
           if (compChoice == 0)
           {
-            Console.WriteLine("You chose Rock. Comp chose Rock");
+            Console.WriteLine("You chose Rock. AI chose Rock");
             Console.WriteLine("DRAW!");
           }
           else if (compChoice == 1)
           {
-            Console.WriteLine("Comp chose Paper");
+            Console.WriteLine("You chose Rock. AI chose Paper");
+            Console.WriteLine("YOU LOSE!");
+
           }
           else if (compChoice == 2)
           {
-            Console.WriteLine("Comp chose Scissors");
+            Console.WriteLine("You chose Rock. AI chose Scissors");
+            Console.WriteLine("YOU WIN!");
           }
           validate = false;
         }
         else if (userChoice == "paper")
         {
-          Console.WriteLine("You chose Paper");
+          if (compChoice == 0)
+          {
+            Console.WriteLine("You chose Paper. AI chose Rock");
+            Console.WriteLine("YOU WIN");
+          }
+          else if (compChoice == 1)
+          {
+            Console.WriteLine("You chose Paper. AI chose Paper");
+            Console.WriteLine("DRAW!");
+
+          }
+          else if (compChoice == 2)
+          {
+            Console.WriteLine("You chose Paper. AI chose Scissors");
+            Console.WriteLine("YOU LOSE!");
+          }
           validate = false;
         }
         else if (userChoice == "scissors")
         {
-          Console.WriteLine("You chose Scissors");
+          if (compChoice == 0)
+          {
+            Console.WriteLine("You chose Scissors. AI chose Rock");
+            Console.WriteLine("YOU LOSE!");
+          }
+          else if (compChoice == 1)
+          {
+            Console.WriteLine("You chose Scissors. AI chose Paper");
+            Console.WriteLine("YOU WIN!");
+
+          }
+          else if (compChoice == 2)
+          {
+            Console.WriteLine("You chose Scissors. AI chose Scissors");
+            Console.WriteLine("DRAW!");
+          }
           validate = false;
         }
         else
         {
-          Console.WriteLine("Wrong");
+          Console.WriteLine("Try Again");
         }
-      }
-
-      if (compChoice == 0)
-      {
-        Console.WriteLine("Comp chose Rock");
-      }
-      else if (compChoice == 1)
-      {
-        Console.WriteLine("Comp chose Paper");
-      }
-      else if (compChoice == 2)
-      {
-        Console.WriteLine("Comp chose Scissors");
       }
 
       //END
